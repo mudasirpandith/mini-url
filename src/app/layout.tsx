@@ -5,10 +5,37 @@ import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Micro-U",
-  description: "Url shortener",
-};
+export const metadata = {
+  metadataBase: new URL("https://micro-u.vercel.app"),
+  title: "Micro Url",
+  description: "Micro Url",
+  openGraph: {
+    title: "Micro Url",
+    description: "Micro Url",
+    url: "https://micro-u.vercel.app",
+    siteName: "https://micro-u.vercel.app/",
+    images: ["/logo.webp"],
+  },
+
+  twitter: {
+    title: "Micro Url",
+    card: "summary_large_image",
+    images: ["/logo.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+} satisfies Metadata;
 
 export default function RootLayout({
   children,

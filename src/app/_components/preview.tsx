@@ -40,16 +40,17 @@ export default function Preview({ url }: Props) {
   }, [url]);
 
   return (
-    <div className="border container max-w-sm p-2 w-fit divide-y-0">
-      {" "}
-      <img src={metaData?.imageUrl} alt="f" />
-      <div className="flex flex-col gap-2 p-2 ">
-        <h1 className="text-sky-700 font-semibold">
-          {metaData?.title ?? "mnot"}
-        </h1>
-        <p className="text-slate-400">{url}</p>
-        <p>{metaData?.description}</p>
+    metaData?.title && (
+      <div className="border container max-w-sm p-2 w-fit divide-y-0">
+        <img src={metaData?.imageUrl} alt="f" />
+        <div className="flex flex-col gap-2 p-2 ">
+          <h1 className="text-sky-700 font-semibold">
+            {metaData?.title ?? "mnot"}
+          </h1>
+          <p className="text-slate-400">{url}</p>
+          <p>{metaData?.description}</p>
+        </div>
       </div>
-    </div>
+    )
   );
 }
