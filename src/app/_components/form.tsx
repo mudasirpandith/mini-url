@@ -24,7 +24,7 @@ export default function Form() {
     if (data) {
       try {
         await navigator.clipboard.writeText(
-          `https://miniurl.vercel.app/${data.shortId}`
+          `https://micro-u.vercel.app/${data.shortId}`
         );
         toast("Copied to clipboard");
         setCopied(true);
@@ -75,7 +75,7 @@ export default function Form() {
       {data?.shortId && (
         <div className="flex container flex-col gap-3">
           <div className="flex flex-row vertically-centered  border-collapse  p-2 justify-between align-middle rounded-sm">
-            <code className="text-ellipsis">{`https://miniurl.vercel.app/${data?.shortId}`}</code>
+            <code className="text-ellipsis">{`https://micro-u.vercel.app/${data?.shortId}`}</code>
             <Button
               size={"sm"}
               variant={"secondary"}
