@@ -8,10 +8,12 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   metadataBase: new URL("https://micro-u.vercel.app"),
   title: "Micro Url",
-  description: "Micro Url",
+  description:
+    "Shorten your URLs very efficiently and securely with Micro Url.",
   openGraph: {
     title: "Micro Url",
-    description: "Micro Url",
+    description:
+      "Shorten your URLs very efficiently and securely with Micro Url.",
     url: "https://micro-u.vercel.app",
     siteName: "https://micro-u.vercel.app/",
     images: ["/logo.webp"],
