@@ -8,13 +8,13 @@ export default function Page() {
     <div className="flex h-screen flex-1 md:flex-row flex-col leading-loose">
       <div className="flex flex-col h-screen  gap-4 p-5 flex-4  justify-center w-full  ">
         <p className="p-2 bg-slate-100 font-semibold w-fit text-sky-700 rounded-xl">
-          Let's make simple with one click.
+          Le&apos;s make simple with one click.
         </p>
         <h1 className="text-2xl md:text-4xl leading ">
           BIO LINK AND LINK SHORTENER FOR BUISNESS NEEDS
         </h1>
         <p className="text-slate-400 ">
-          On a single plateform, you'll find all tools you need to connect
+          On a single plateform, you&apos;ll find all tools you need to connect
           audiences worldwide manage links and QR codes.
         </p>
       </div>
