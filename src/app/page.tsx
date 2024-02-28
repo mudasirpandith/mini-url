@@ -5,8 +5,8 @@ import Form from "./(auth)/micro-link/_components/form";
 
 export default function Page() {
   return (
-    <div className="flex h-screen flex-1 md:flex-row flex-col leading-loose">
-      <div className="flex flex-col h-screen  gap-4 p-5 flex-4  justify-center w-full  ">
+    <div className="flex flex-1 md:flex-row flex-col leading-loose">
+      <div className="flex flex-col  gap-4 p-5 flex-4  justify-center w-full  ">
         <p className="p-2 bg-slate-100 font-semibold w-fit text-sky-700 rounded-xl">
           Le&apos;s make simple with one click.
         </p>
@@ -18,7 +18,7 @@ export default function Page() {
           audiences worldwide manage links and QR codes.
         </p>
       </div>
-      <div className="flex p-10  flex-col flex-4 w-full h-screen justify-center  items-center ">
+      <div className="flex p-10  flex-col flex-4 w-full justify-center  items-center ">
         <h1 className="text-4xl text-left text-black font-bold  p-5">
           Micro Url
         </h1>
