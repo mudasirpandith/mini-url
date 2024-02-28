@@ -5,8 +5,8 @@ import Form from "./(auth)/micro-link/_components/form";
 
 export default function Page() {
   return (
-    <div className="flex flex-1 flex-col leading-loose">
-      <div className="flex flex-col  gap-4 p-5 flex-4  justify-center w-full  ">
+    <div className="flex flex-1 flex-col leading-loose  items-center">
+      <div className="flex flex-col  gap-4 p-5 flex-4 items-center  justify-center w-full  ">
         <p className="p-2 bg-slate-100 font-semibold w-fit text-sky-700 rounded-xl">
           Le&apos;s make simple with one click.
         </p>

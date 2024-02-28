@@ -2,7 +2,7 @@ import Form from "./_components/form";
 
 export default function Page() {
   return (
-    <main className="flex-1 h-screen flex flex-col items-center">
+    <main className="flex-1 h-screen flex  flex-col items-center">
       <h1 className="text-4xl text-left text-black font-bold  p-5">
         Micro Url
       </h1>
