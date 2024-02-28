@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 
-const inter = Inter({ subsets: ["latin"] });
+const quickSand = Quicksand({ subsets: ["latin"] });
 
 export const metadata = {
   metadataBase: new URL("https://micro-u.vercel.app"),
@@ -47,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Toaster />
-      <body className={inter.className}>{children}</body>
+      <body className={quickSand.className}>{children}</body>
     </html>
   );
 }

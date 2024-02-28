@@ -2,6 +2,7 @@
 import React, { useState, useTransition } from "react";
 import { toast } from "sonner";
 import { Copy, CopyCheck, Loader2 } from "lucide-react";
+import QRCode from "react-qr-code";
 import {
   Tooltip,
   TooltipContent,
@@ -65,27 +66,39 @@ export default function Form() {
                 {shortening && (
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 )}{" "}
-                Shorten
+                Short Link
               </Button>
             </TooltipTrigger>
             <TooltipContent>Click to shorten url</TooltipContent>
           </Tooltip>
         </TooltipProvider>
       </div>{" "}
-      {data?.shortId && (
-        <div className="flex container flex-col gap-3">
-          <div className="flex flex-row vertically-centered  border-collapse  p-2 justify-between align-middle rounded-sm">
-            <code className="text-ellipsis">{`https://micro-u.vercel.app/${data?.shortId}`}</code>
-            <Button
-              size={"sm"}
-              variant={"secondary"}
-              onClick={handleCopyToClipboard}
-            >
-              {copies ? <CopyCheck color="green" /> : <Copy />}
-            </Button>
+      <div className="flex flex-1 sm:flex-row flex-col justify-center items-center">
+        {data?.shortId && (
+          <div className="w-full sm:w-auto max-w-xs h-auto sm:h-[100px] flex justify-center mb-4 sm:mb-0">
+            <QRCode
+              size={256}
+              style={{ height: "auto", maxWidth: "100%", width: "100%" }}
+              value={`https://micro-u.vercel.app/${data?.shortId}`}
+              viewBox={`0 0 256 256`}
+            />
           </div>
-        </div>
-      )}
+        )}
+        {data?.shortId && (
+          <div className="flex container flex-col gap-3">
+            <div className="flex flex-row items-center border p-2 justify-between rounded-sm">
+              <code className="text-ellipsis">{`https://micro-u.vercel.app/${data?.shortId}`}</code>
+              <Button
+                size={"sm"}
+                variant={"secondary"}
+                onClick={handleCopyToClipboard}
+              >
+                {copies ? <CopyCheck color="green" /> : <Copy />}
+              </Button>
+            </div>
+          </div>
+        )}
+      </div>
       {data?.shortId && (
         <div className="flex container flex-col gap-3">
           <h1 className="font-bold text-slate-400">Facebook</h1>
