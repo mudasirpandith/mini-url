@@ -74,7 +74,7 @@ export default function Form() {
         </TooltipProvider>
       </div>{" "}
       <div className="flex flex-1 sm:flex-row flex-col justify-center items-center">
-        {data?.shortId && (
+        {/* {data?.shortId && (
           <div className="w-full sm:w-auto max-w-xs h-auto sm:h-[100px] flex justify-center mb-4 sm:mb-0">
             <QRCode
               size={256}
@@ -83,7 +83,7 @@ export default function Form() {
               viewBox={`0 0 256 256`}
             />
           </div>
-        )}
+        )} */}
         {data?.shortId && (
           <div className="flex container flex-col gap-3">
             <div className="flex flex-row items-center border p-2 justify-between rounded-sm">
